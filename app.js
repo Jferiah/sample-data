@@ -11,7 +11,6 @@ var express = require('express');
 // for more info, see: https://www.npmjs.com/package/cfenv
 var cfenv = require('cfenv');
 
-var watson = require('watson-developer-cloud');
 var bodyParser = require('body-parser');
 
 
@@ -29,10 +28,28 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
 
-app.get('/w*', function (req, res) {
+app.get('/sent', function (req, res) {
+  res.sendFile(__dirname + '/public/sent.html');
+});
+
+app.post('/register', function (req, res) {
   
-  var host = req.url;
-  res.sendFile(__dirname + '/public' + host + ".html");
+  var user_name = req.body.name;
+
+  var Cloudant = require('cloudant');
+  var me = ''; // Set this to your own account
+  var password = "";
+  var cloudant = Cloudant({account:me, password:password});
+  var db = cloudant.db.use('sampledb');
+
+  var doc = {
+    "register":req.body
+  };
+
+  db.insert(doc, function(err, body) {
+  }); 
+
+  res.sendFile(__dirname + '/public/sent.html');
 
 });
 

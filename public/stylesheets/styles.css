@@ -1,0 +1,69 @@
+.button-main
+{
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 35px;
+    background-color: rgb(143,149,93);
+    display: inline-block;
+    line-height: 35px;
+    text-align: center;
+    color:white;
+    cursor: pointer;
+}
+.checked
+{
+    background-color: rgb(82,92,68);
+    font-weight: bold;
+}
+.main-container
+{
+    width: 800px;
+    background-color: #FFF;
+    display: inline-block;
+}
+body
+{
+    text-align: center;
+    margin:0px;
+    background-color: green;
+}
+
+.div-text
+{
+    text-align: left;
+}
+a
+{
+    text-decoration: none;
+}
+.div-question
+{
+    font-weight: bold;
+    width: 200px;
+    display: inline-block;
+}
+.div-answer
+{
+    display: inline-block
+}
+input[type="text"]
+{
+    width: 200px
+}
+input[type="submit"]
+{
+    background-color: rgb(31,155,187);
+    border:solid 1px gray;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color:#FFF;
+    font-weight: bold;
+}
+.div_line
+{
+    background-color: #CCC;
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+}

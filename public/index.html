@@ -1,33 +1,89 @@
-<!DOCTYPE html>
 <html>
+    <head>
+        <link href="/stylesheets/styles.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main-container">
+            <div style="text-align: center">
+                <img src="images/main.png" height="200px" width="800px">
+                <br><br>
+                <a href="#">
+                    <div id="btn-video" class="button-main checked" onclick="activateVideo()">Video</div>
+                </a>
+                <a href="#">
+                    <div id="btn-quizz" class="button-main" onclick="activateQuizz()">Cuestionario</div>
+                </a>
+                <br><br>
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/2W1Y2wylBj4" frameborder="0" allowfullscreen></iframe>
+                
+                <div id="quizz" style="display:none; text-align:left">
+                    <form style="padding-left:10px;padding-right:10px" method="POST" action="/register">
+                        <div class="div-question">Nombre: </div> <div class="div-answer"> <input type="text" name="name" required></div><br><br>
+                        <div class="div-question">E-mail: </div> <div class="div-answer"> <input type="text" name="email" required></div><br><br>
+                        
+                        <div class="div-question">Programación: </div> 
+                        <div class="div-answer">
+                            <input type="checkbox" name="programming" value="dotnet"> dotNet
+                            <input type="checkbox" name="programming" value="Java"> Java
+                            <input type="checkbox" name="programming" value="php"> PHP
+                            <input type="checkbox" name="programming" value="node"> nodeJS
+                            <input type="checkbox" name="programming" value="android"> Android
+                            <input type="checkbox" name="programming" value="ios"> iOS
+                        </div><br><br>
 
-  <head>
-    <title>Dr. Corazon @Watson</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="stylesheets/style.css">
-  </head>
+                        <div class="div_line"></div></br></br>
+                        
+                        <div class="div-question">¿Cuáles son los pilares del Cloud Computing?</div>
+                        <div class="div-answer">
+                            <input type="radio" name="1" value="a" required> Servicios en la nube  <br>
+                            <input type="radio" name="1" value="c" required> Infraestructura, plataforma y software como servicio <br>
+                            <input type="radio" name="1" value="b" required> Infraestructura y software como servicio <br>
+                        </div><br><br>
 
-  <body>
-    <div style="padding-left:15px;">
-      <div>
-        
-        <h1>DevOps Excercise</h1>
-      </div>
-      <ul>
-        <li>1. Envía un pull request al repo <a href="https://github.com/lgbaeza/sample-devops">sample-devops</a></li>
-        <li>2. Crea un archivo con el nombre "w{tu-nombre}.html" reemplazando {tu-nombre} por tu nombre</li>
-        <li>3. Guarda el archivo dentro de la carpeta "public"</li>
-        <li>4. Envía commit</li>
-        <li></li>
-      </ul>
-      
-      
+                        <div class="div-question">¿Qué es Bluemix?</div>
+                        <div class="div-answer">
+                            <input type="radio" name="2" value="c" required> Plataforma de servicios en la nube <br>
+                            <input type="radio" name="2" value="a" required> Lenguaje de programación <br>
+                            <input type="radio" name="2" value="b" required> Framework de desarrollo <br>
+                        </div><br><br>
 
-    </div>
+                        <div class="div-question">¿Qué tipo de servicios hay en bluemix?</div>
+                        <div class="div-answer">
+                            <input type="radio" name="3" value="a" required> IDE, Servidor virtual, runtime <br>
+                            <input type="radio" name="3" value="c" required> DevOps, Base de datos, runtime <br>
+                            <input type="radio" name="3" value="b" required> Servidor virtual, Base de datos, lenguaje de programación <br>
+                        </div><br><br>
 
-    <script src="js/scripts.js"></script>
-  </body>
+                        <div class="div-question">¿Cómo se consume una API?</div>
+                        <div class="div-answer">
+                            <input type="radio" name="4" value="b" required> Igual que una base de datos <br>
+                            <input type="radio" name="4" value="c" required> Vía un lenguaje de programación <br>
+                            <input type="radio" name="4" value="a" required> Via una invocación REST <br>
+                        </div><br><br>
 
+                        <div class="div-question">¿En qué escenarios se puede utilizar Bluemix?</div>
+                        <div class="div-answer">
+                            <input type="radio" name="5" value="a" required> Mobile back end <br>
+                            <input type="radio" name="5" value="b" required> Integración con sistemas existentes <br>
+                            <input type="radio" name="5" value="d" required> Aplicaciones web <br>
+                            <input type="radio" name="5" value="c" required> Todos los anteriores anteriores <br>
+                        </div><br><br>
+
+                        <div class="div-question">Ejemplos de servicios de Watson</div>
+                        <div class="div-answer">
+                            <input type="radio" name="6" value="a" required> Análisis de personalidad, procesamiento de lenguaje natural <br>
+                            <input type="radio" name="6" value="b" required> Reconocimiento visual, síntesis de voz <br>
+                            <input type="radio" name="6" value="d" required> Reconocimiento de voz, análisis de emociones <br>
+                            <input type="radio" name="6" value="c" required> Todos los anteriores <br>
+                        </div><br><br>
+
+                        <p style="text-align: center"><input type="submit" value="Enviar"><p>
+                    </form>
+                </div>
+                    
+                <br><br>
+            </div>
+        </div>
+        <script src="js/scripts.js"></script>
+    </body>
 </html>

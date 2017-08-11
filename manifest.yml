@@ -3,6 +3,6 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: lgbc-friendzone
-  host: lgbc-friendzone
-  disk_quota: 1024M
+  name: lgbc-data-app
+  host: lgbc-data-app
+  disk_quota: 512M
